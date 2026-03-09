@@ -1,9 +1,6 @@
 import React from "react";
 import Card from "./Card";
 import Footer from "./Footer";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 import NavBar from "./NavBar";
 import Hero from "./Hero";
 const cardsData = [
@@ -40,28 +37,25 @@ const cardsData = [
 const Home = () => {
 	return (
 		<>
-			<NavBar/>
-		<div className="container">
-			<Hero/>
-
-		<div>
-			<div className="container my-5">
-				<div className="row row-cols-1 row-cols-md-4 g-4">
-					{cardsData.map((card) => (
-						<div className="col" key={card.id}>
-							<Card
-								imageUrl={card.imageUrl}
-								title={card.title}
-								text={card.text}
-								buttonText={card.buttonText}
-							/>
-						</div>
-					))}
+			<NavBar />
+			<div className="container">
+				<Hero />
+				<div className="my-5">
+					<div className="row row-cols-1 row-cols-md-4 g-4">
+						{cardsData.map((card) => (
+							<div className="col" key={card.id}>
+								<Card
+									imageUrl={card.imageUrl}
+									title={card.title}
+									text={card.text}
+									buttonText={card.buttonText}
+								/>
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 			<Footer />
-		</div>
-
 		</>
 	);
 };
